@@ -1,0 +1,18 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>198</x><y>310</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+ViewRequestsUI
+--
++ ViewRequestsUI()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>398</x><y>320</y><w>80</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;60;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>458</x><y>310</y><w>170</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+SearchRequestsController
+--
++ searchRequests(
+	username : String,
+	description : String,
+	status : String,
+) : array[Request]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>618</x><y>330</y><w>70</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>668</x><y>310</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Request
+--
++ searchRequests(
+	username : String,
+	description : String,
+	status : String,
+) : array[Request]</panel_attributes><additional_attributes></additional_attributes></element></diagram>

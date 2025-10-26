@@ -1,0 +1,10 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>105</x><y>310</y><w>180</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+ViewProfileUI
+--
++ ViewProfile()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>275</x><y>320</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>345</x><y>310</y><w>180</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+ViewProfileController
+--
++ viewProfile() : array[Profile]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>515</x><y>330</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>585</x><y>310</y><w>180</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Profile
+--
++ viewProfile() : array[Profile]</panel_attributes><additional_attributes></additional_attributes></element></diagram>
