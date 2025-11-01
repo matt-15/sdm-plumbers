@@ -8,7 +8,7 @@ SearchUserController
 	username : String,
 	role : String
 ) : array[User]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>618</x><y>330</y><w>70</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;50;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>668</x><y>310</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
-User
+UserDAO
 --
 + searchUser(
 	username : String,

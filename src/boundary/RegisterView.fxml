@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.RegisterController">
+    <children>
+        <Label layoutX="120" layoutY="20" text="Register New User" style="-fx-font-size: 18px;"/>
+        <Label layoutX="50" layoutY="80" text="Username:"/>
+        <TextField fx:id="usernameField" layoutX="150" layoutY="75"/>
+
+        <Label layoutX="50" layoutY="120" text="Password:"/>
+        <PasswordField fx:id="passwordField" layoutX="150" layoutY="115"/>
+
+        <Label layoutX="50" layoutY="160" text="Role:"/>
+        <ComboBox fx:id="roleBox" layoutX="150" layoutY="155" prefWidth="150"/>
+
+        <Button fx:id="registerButton" layoutX="150" layoutY="200" text="Register"/>
+        <Label fx:id="messageLabel" layoutX="150" layoutY="240" textFill="red"/>
+    </children>
+</AnchorPane>
+

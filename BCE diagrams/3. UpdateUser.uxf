@@ -1,20 +1,20 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>360</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>60</x><y>360</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
 UpdateUserUI
 --
-+ UpdateUserBoundary()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>370</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>360</y><w>210</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
++ UpdateUserBoundary()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>370</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>360</y><w>210</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
 UserController
 --
 + updateUser(
-	userID : String,
-	newUsername : String,
+	userId : int, 
+	newUsername : String, 
 	newPassword : String, 
 	newRole : String
-) : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>380</y><w>120</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>360</y><w>190</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
-User
+) : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>380</y><w>120</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>360</y><w>190</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+UserDAO
 --
 + updateUser(
-	userID : String,
-	newUsername : String,
+	userId : int, 
+	newUsername : String, 
 	newPassword : String, 
 	newRole : String
 ) : bool</panel_attributes><additional_attributes></additional_attributes></element></diagram>
