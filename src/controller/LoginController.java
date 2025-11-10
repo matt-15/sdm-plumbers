@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.User;
+import model.Session; // ✅ important: import Session
 
 public class LoginController {
 
@@ -40,8 +41,14 @@ public class LoginController {
         String role = roleBox.getValue();
 
         User user = userDAO.login(username, password);
+
         if (user != null && role != null && role.equalsIgnoreCase(user.getRole())) {
+
+            // ✅ Store logged-in user to Session
+            Session.setUser(user.getId(), user.getRole(), user.getUsername());
+
             messageLabel.setText("✅ Login successful. Welcome " + user.getUsername());
+
             openDashboard(user);
         } else {
             messageLabel.setText("❌ Invalid username, password, or role.");
@@ -81,6 +88,7 @@ public class LoginController {
         }
     }
 }
+
 
 
 

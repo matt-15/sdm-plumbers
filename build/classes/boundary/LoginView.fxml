@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LoginController"
+            prefHeight="300.0" prefWidth="400.0">
+    <children>
+        <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <children>
+                <Label text="CSR Matching System - Login" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="usernameField" promptText="Username" maxWidth="250"/>
+                <PasswordField fx:id="passwordField" promptText="Password" maxWidth="250"/>
+                <ComboBox fx:id="roleBox" promptText="Select Role" maxWidth="250"/>
+                <Button fx:id="loginButton" text="Login" maxWidth="250"/>
+                <Button text="Register" onAction="#openRegister" maxWidth="250"/>
+                <Label fx:id="messageLabel" textFill="red" wrapText="true"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
+
+

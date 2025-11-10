@@ -11,7 +11,8 @@ public class CreateProfileUI {
     private final CreateProfileController controller = new CreateProfileController();
 
     public void show(Stage stage, int userID) {
-        Label title = new Label("Create New Profile");
+        Label title = new Label("➕ Create New Profile");
+
         TextField nameField = new TextField();
         nameField.setPromptText("Full Name");
 
@@ -40,8 +41,11 @@ public class CreateProfileUI {
         VBox box = new VBox(10, title, nameField, emailField, phoneField, createBtn, messageLabel);
         box.setAlignment(Pos.CENTER);
         box.setStyle("-fx-padding: 20;");
+
         stage.setScene(new Scene(box, 400, 300));
         stage.setTitle("Create Profile");
         stage.show();
     }
 }
+
+

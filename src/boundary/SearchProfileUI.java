@@ -12,14 +12,14 @@ import javafx.stage.Stage;
 import model.Profile;
 
 public class SearchProfileUI {
+
     private final SearchProfileController controller = new SearchProfileController();
 
     public void show(Stage stage) {
-        Label title = new Label("🔍 Search Profile");
-        title.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Label title = new Label("🔍 Search Profile by Full Name");
 
         TextField nameField = new TextField();
-        nameField.setPromptText("Enter full name to search");
+        nameField.setPromptText("Enter full name keyword");
 
         Button searchBtn = new Button("Search");
 
@@ -43,19 +43,18 @@ public class SearchProfileUI {
         table.getColumns().addAll(idCol, userIDCol, nameCol, emailCol, phoneCol);
 
         searchBtn.setOnAction(e -> {
-            String name = nameField.getText().trim();
-            if (name.isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Please enter a name to search.", ButtonType.OK);
+            String keyword = nameField.getText().trim();
+            if (keyword.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.WARNING, "Please enter a name keyword.", ButtonType.OK);
                 alert.show();
                 return;
             }
-
-            table.setItems(FXCollections.observableArrayList(controller.searchProfile(name)));
+            table.setItems(FXCollections.observableArrayList(controller.searchProfile(keyword)));
         });
 
         VBox layout = new VBox(10, title, nameField, searchBtn, table);
         layout.setAlignment(Pos.CENTER);
-        layout.setPadding(new Insets(15));
+        layout.setPadding(new Insets(20));
 
         Scene scene = new Scene(layout, 600, 400);
         stage.setScene(scene);

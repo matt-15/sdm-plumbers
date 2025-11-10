@@ -2,6 +2,8 @@ package boundary;
 
 import controller.ViewProfileController;
 import javafx.collections.FXCollections;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,6 +17,7 @@ public class ViewProfileUI {
     private final ViewProfileController controller = new ViewProfileController();
 
     public void show(Stage stage) {
+
         TableView<Profile> table = new TableView<>();
 
         TableColumn<Profile, Integer> idCol = new TableColumn<>("ID");
@@ -29,19 +32,25 @@ public class ViewProfileUI {
         TableColumn<Profile, String> emailCol = new TableColumn<>("Email");
         emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        TableColumn<Profile, String> phoneCol = new TableColumn<>("Phone Number");
+        TableColumn<Profile, String> phoneCol = new TableColumn<>("Phone");
         phoneCol.setCellValueFactory(new PropertyValueFactory<>("phoneNum"));
 
         table.getColumns().addAll(idCol, userIDCol, nameCol, emailCol, phoneCol);
-        table.setItems(FXCollections.observableArrayList(controller.viewAllProfiles()));
 
-        VBox layout = new VBox(table);
+        // Load data into table
+        table.setItems(FXCollections.observableArrayList(controller.viewProfiles()));
+
+        VBox layout = new VBox(10, table);
+        layout.setAlignment(Pos.CENTER);
+        layout.setPadding(new Insets(20));
+
         Scene scene = new Scene(layout, 600, 400);
-        stage.setScene(scene);
         stage.setTitle("View All Profiles");
+        stage.setScene(scene);
         stage.show();
     }
 }
+
 
 
 

@@ -24,18 +24,15 @@ public class AdminDashboard {
 
         Label welcome = new Label("Welcome, " + user.getUsername() + " (Admin)");
 
-        // ---- User Management ----
         Button viewUsers = new Button("👥 View Users");
         viewUsers.setOnAction(e -> new ViewUsersUI().show(new Stage()));
 
-        Button suspendUser = new Button("🚫 Suspend User");
+        Button suspendUser = new Button("❌ Suspend User");
         suspendUser.setOnAction(e -> new SuspendUserUI().show(new Stage()));
 
-        // ---- Profile Management ----
-        Button manageProfile = new Button("🧩 Manage Profiles");
-        manageProfile.setOnAction(e -> new ProfileManagementUI(user).show(new Stage()));
+        Button profileManage = new Button("👤 Profile Management");
+        profileManage.setOnAction(e -> new ProfileManagementUI(user).show(new Stage()));
 
-        // ---- Logout ----
         Button logout = new Button("Logout");
         logout.setOnAction(e -> {
             logout.getScene().getWindow().hide();
@@ -43,16 +40,17 @@ public class AdminDashboard {
         });
 
         box.getChildren().addAll(
-                welcome,
-                viewUsers,
-                suspendUser,
-                manageProfile,
+                welcome, 
+                viewUsers, 
+                suspendUser, 
+                profileManage, 
                 logout
         );
 
         return new Scene(box, 520, 350);
     }
 }
+
 
 
 

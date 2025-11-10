@@ -1,19 +1,13 @@
 package controller;
 
-import database.ProfileDAO;
+import model.Profile;
 
 public class SusProfileController {
-    private final ProfileDAO profileDAO = new ProfileDAO();
 
-    public boolean susProfile(String userID) {
-        try {
-            int id = Integer.parseInt(userID);
-            return profileDAO.suspendProfile(id);
-        } catch (NumberFormatException e) {
-            System.out.println("❌ Invalid userID: " + userID);
-            return false;
-        }
+    public boolean susProfile(int userID) {
+        return Profile.susProfile(userID);
     }
 }
+
 
 
